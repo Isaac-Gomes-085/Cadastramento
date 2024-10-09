@@ -12,26 +12,31 @@
     <title>Sobral Palacio</title>
   </head>
   <body>
-    <nav id="navbar">
-      <h1 id="title_navbar">Sobral Palacio</h1>
-      <i class="bi bi-box-arrow-right"></i>
-    </nav>
+    <div class="box_hidden"></div>
+    <header id="header_menu">
+      <h1 id="title_header">Sobral Palacio</h1>
+      <nav id="navbar">
+        <i class="bi bi-box-arrow-right"></i>
+      </nav>
+    </header>
 
     <main>
-      <span>Versão 7.2.2</span>
-      <div>
+      <div class="box_version">
+        <span class="version_App">Versão 7.2.2</span>
+      </div>
+      <div class="container_email_client">
         <span class="span_Icons">
           <i class="bi bi-person-circle"></i>
         </span>
-
         <span class="email_client">isaacspcombustiveis@gmail.com</span>
       </div>
-      <div>
+
+      <div class="container_select_network">
         <span class="span_Icons">
           <i class="bi bi-diagram-2"></i>
         </span>
 
-        <label for="select_your_network"> <strong>Sua rede: </strong> </label>
+        <label id="label_select_menu" for="select_your_network"> <strong>Sua rede: </strong> </label>
         <select name="select_your_network" id="select_your_network">
           <option value="option1" disabled selected>Selecione uma rede</option>
           <option value="option1">Sobral &amp; Palacio</option>
@@ -41,21 +46,25 @@
           <option value="option5">option5</option>
         </select>
       </div>
-      <div>
+      <div class="information_menu">
         <p>
           Os acessos abaixo são configurados a partir de uma conta principal.
-          <br />
           Selecione o posto desejado e clique em "Acessar minha conta" para
-          <br />
           visualizar os dados.
         </p>
       </div>
       <form class="form_listView">
-        <ul>
+        <ul class="ul_list">
             {% for client in clients %}
-            <li>{{ client.fantasy_name_client }}</li>
+            <div class="box_list">
+              <span class="icons_fuel_pump">
+                <i class="bi bi-fuel-pump"></i>
+              </span>
+              <li id="item_listView">{{ client.fantasy_name_client }}</li>
+              <li id="item_listView_code_client">{{ client.code_client }}</li>
+            </div>
             {% empty %}
-                <li>Nenhuma rede encontrada</li>
+            <li class="item_listView">Nenhuma rede encontrada</li>
             {% endfor %}
         </ul>
         <input id="form_acessar_conta" type="submit" value="Acessar minha conta">
