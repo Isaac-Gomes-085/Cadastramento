@@ -53,7 +53,7 @@
           visualizar os dados.
         </p>
       </div>
-      <form class="form_listView">
+      <form action="{% url 'drivers' %}" method="get" class="form_listView">
         <ul class="ul_list">
             {% for client in clients %}
             <div class="box_list">
@@ -62,6 +62,8 @@
               </span>
               <li id="item_listView">{{ client.fantasy_name_client }}</li>
               <li id="item_listView_code_client">{{ client.code_client }}</li>
+              <input type="submit" value=" {{ client.fantasy_name_client }} ">
+              <input type="submit" value=" {{ client.code_client }} ">
             </div>
             {% empty %}
             <li class="item_listView">Nenhuma rede encontrada</li>
