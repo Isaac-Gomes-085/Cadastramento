@@ -49,9 +49,11 @@ body {
     padding: 5px;
     font-size: 25px;
     cursor: pointer;
+    color: var(--color-btn);
 }
 
 .email_client {
+    color: var(--text-Geral);
     padding: 3px;
     font-size: 20px;
 }
@@ -114,10 +116,13 @@ body {
     background-color: var(--color-icons-fuel_pump);
     border-radius: 50%;
     padding: 10px;
-    margin: 5px;
+    margin: auto;
+    grid-area: 1 / 1 / 4 / 2;
 }
 
 .box_list {
+    width: 100%;
+    height: auto;
     background-color: var(--bg-Geral-container);
     border-radius: 5px;
     margin: 10px;
@@ -125,25 +130,32 @@ body {
     padding: 10px;
     cursor: pointer;
     border: 2px solid var(--color-icons-fuel_pump);
-    transition: all .5s;
+    transition: all 0.5s; 
+    display: grid;
+    justify-content: start;
+    position: relative; 
+    overflow: hidden;
 }
 
 .box_list:hover {
+    display: grid;
     background-color: #250050;
     transition: all .8s;
 }
 
 #item_listView {
+    grid-area: 1 / 2 / 3 / 2;
     justify-content: space-around;
     font-size: 20px;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     color: var(--text-Geral);
     list-style: none;
 }
 #item_listView_code_client {
+    grid-area: 3 / 2 / 4 / 3;
     justify-content: space-around;
     font-size: 20px;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     color: var(--text-Geral);
     list-style: none;
 }
@@ -162,4 +174,3 @@ body {
 #form_acessar_conta:hover {
     background-color: #616161;
 }
-
