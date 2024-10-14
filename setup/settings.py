@@ -69,6 +69,12 @@ DATABASES = {
     'default': url_db(config("DATABASE_URL", default=f'sqlite:///{BASE_DIR/"db.sqlite3"}'))
 }
 
+EMAIL_BACKEND = config("EMAIL_BACKEND")
+EMAIL_HOST = config("EMAIL_BACKEND")
+EMAIL_PORT = config("EMAIL_PORT")
+EMAIL_USE_TLS = config("EMAIL_USE_TLS", cast=bool, default=False)
+EMAIL_HOST_USER = config("EMAIL_HOST_USER")  
+EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
