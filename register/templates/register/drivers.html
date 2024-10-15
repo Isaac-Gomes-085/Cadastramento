@@ -1,25 +1,55 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Motoristas do Posto</h1>
-    <ul class="ul_list">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drivers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Dados do Motoristas</h1>
+    <table class="table table-bordered border-primary">
         {% if drivers %}
             {% for driver in drivers %}
-                <div class="box_list">
-                    <span class="icons_fuel_pump">
-                        <i class="bi bi-fuel-pump"></i>
-                    </span>
-                    <li id="item_listView">{{ driver.name_driver }}</li>
-                </div>
+            <thead>
+                <tr>
+                    <th scope="col">Posto do motorista</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Nascimento</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">RG</th>
+                    <th scope="col">Emissão RG</th>
+                    <th scope="col">CNH</th>
+                    <th scope="col">Emissão CNH</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Linha de Negocio</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">{{ driver.gas_station_CNPJ.fantasy_name_gas_station }}</th>
+                    <td>{{ driver.name_driver }}</td>
+                    <td>{{ driver.place_of_birth }}</td>
+                    <td>{{ driver.fone_driver }}</td>
+                    <td>{{ driver.email_driver }}</td>
+                    <td>{{ driver.cpf_driver }}</td>
+                    <td>{{ driver.rg_driver }}</td>
+                    <td>{{ driver.rg_issuer }}</td>
+                    <td>{{ driver.driver_license }}</td>
+                    <td>{{ driver.driver_license_issuer }}</td>
+                    <td>{{ driver.category }}</td>
+                    <td>{{ driver.business_line }}</td>
+                </tr>
+            </tbody>
+        </table>
             {% endfor %}
         {% else %}
             <li class="item_listView">Nenhuma rede encontrada</li>
         {% endif %}
-    </ul>
-</body>
+    </table>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 </html>

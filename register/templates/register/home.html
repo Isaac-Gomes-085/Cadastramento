@@ -60,10 +60,8 @@
               <span class="icons_fuel_pump">
                 <i class="bi bi-fuel-pump"></i>
               </span>
-              <li id="item_listView">{{ gas_station.fantasy_name_gas_station }}</li>
-              <li id="item_listView_code_client">{{ gas_station.cnpj_gas_station }}</li>
-              <input type="submit" value=" {{ gas_station.fantasy_name_gas_station }} ">
-              <input type="submit" value=" {{ gas_station.cnpj_gas_station }} ">
+              <input id="item_listView" type="submit" value=" {{ gas_station.fantasy_name_gas_station }} ">
+              <input id="item_listView_code_client" type="submit" value=" {{ gas_station.cnpj_gas_station }} ">
             </div>
             {% empty %}
             <li class="item_listView">Nenhuma rede encontrada</li>

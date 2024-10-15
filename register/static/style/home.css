@@ -130,7 +130,7 @@ body {
     padding: 10px;
     cursor: pointer;
     border: 2px solid var(--color-icons-fuel_pump);
-    transition: all 0.5s; 
+    transition: all 0.7s; 
     display: grid;
     justify-content: start;
     position: relative; 
@@ -149,7 +149,10 @@ body {
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     color: var(--text-Geral);
-    list-style: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-bottom: #0a0a0a 1px solid;
 }
 #item_listView_code_client {
     grid-area: 3 / 2 / 4 / 3;
@@ -157,7 +160,10 @@ body {
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     color: var(--text-Geral);
-    list-style: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+
 }
 
 #form_acessar_conta {
