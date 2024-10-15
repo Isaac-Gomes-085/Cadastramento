@@ -55,15 +55,15 @@
       </div>
       <form action="{% url 'drivers' %}" method="get" class="form_listView">
         <ul class="ul_list">
-            {% for client in clients %}
+            {% for gas_station in gas_stations %}
             <div class="box_list">
               <span class="icons_fuel_pump">
                 <i class="bi bi-fuel-pump"></i>
               </span>
-              <li id="item_listView">{{ client.fantasy_name_client }}</li>
-              <li id="item_listView_code_client">{{ client.code_client }}</li>
-              <input type="submit" value=" {{ client.fantasy_name_client }} ">
-              <input type="submit" value=" {{ client.code_client }} ">
+              <li id="item_listView">{{ gas_station.fantasy_name_gas_station }}</li>
+              <li id="item_listView_code_client">{{ gas_station.cnpj_gas_station }}</li>
+              <input type="submit" value=" {{ gas_station.fantasy_name_gas_station }} ">
+              <input type="submit" value=" {{ gas_station.cnpj_gas_station }} ">
             </div>
             {% empty %}
             <li class="item_listView">Nenhuma rede encontrada</li>
