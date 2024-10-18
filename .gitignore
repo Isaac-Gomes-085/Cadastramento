@@ -9,7 +9,7 @@ __pycache__/
 .env
 
 # Django
-
+*.sqlite3
 *.log
 
 # IDEs
